@@ -1,0 +1,2351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nirvanut Trading — Premium Nuts & Dried Fruits Supplier</title>
+<meta name="description" content="France-based premium nuts and dried fruits supplier. Pistachios, almonds, hazelnuts, cashews, saffron — direct sourcing from origin countries."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #1a3d2e;
+  --green-2: #2a5a44;
+  --green-deep: #0f2a1f;
+  --bordeaux: #8a2828;
+  --bordeaux-2: #6b1f1f;
+  --gold: #c4a05a;
+  --gold-soft: #d4b87a;
+  --cream: #f5ecd9;
+  --cream-2: #ede3c8;
+  --paper: #faf5e8;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-faint: #8a8472;
+  --rule: rgba(26,61,46,.18);
+  --rule-soft: rgba(26,61,46,.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+html[lang="fa"] body { font-family: 'Vazirmatn', sans-serif; line-height: 1.8; }
+
+button { font: inherit; cursor: pointer; background: none; border: none; color: inherit; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ============ DECORATIVE PATTERN ============ */
+.fan-pattern {
+  position: absolute;
+  background-image:
+    radial-gradient(ellipse at 50% 100%, var(--gold) 0%, transparent 1px),
+    repeating-radial-gradient(ellipse 200% 100% at 50% 100%, transparent 0, transparent 18px, var(--gold) 18px, var(--gold) 19px);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* ============ HEADER ============ */
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 50;
+  background: rgba(250,245,232,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--green);
+}
+.tulip-logo {
+  width: 38px; height: 38px;
+  flex-shrink: 0;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: .04em;
+  color: var(--bordeaux);
+}
+.brand-name span { color: var(--green); }
+.brand-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 4px;
+}
+html[lang="fa"] .brand-tag { font-family: 'Vazirmatn', sans-serif; letter-spacing: .05em; font-size: 11px; }
+
+nav.main-nav {
+  display: flex;
+  gap: 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+html[lang="fa"] nav.main-nav { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 14px; font-weight: 400; }
+
+nav.main-nav a {
+  color: var(--ink-soft);
+  position: relative;
+  transition: color .25s;
+  padding: 4px 0;
+}
+nav.main-nav a:hover { color: var(--bordeaux); }
+nav.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width .3s;
+}
+nav.main-nav a:hover::after { width: 100%; }
+html[dir="rtl"] nav.main-nav a::after { left: auto; right: 0; }
+
+@media (max-width: 900px) {
+  nav.main-nav { display: none; }
+}
+
+.lang-wrap { position: relative; }
+.lang-btn {
+  padding: 7px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all .2s;
+}
+.lang-btn:hover { background: var(--green); color: var(--cream); border-color: var(--green); }
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 6px;
+  min-width: 150px;
+  box-shadow: 0 12px 32px -8px rgba(26,61,46,.25);
+  display: none;
+  z-index: 100;
+}
+.lang-menu.open { display: block; }
+html[dir="rtl"] .lang-menu { right: auto; left: 0; }
+.lang-menu button {
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background .15s;
+}
+html[dir="rtl"] .lang-menu button { text-align: right; }
+.lang-menu button:hover { background: var(--cream); color: var(--green); }
+.lang-menu button.active { color: var(--bordeaux); font-weight: 500; background: rgba(196,160,90,.1); }
+.lang-menu .code {
+  font-size: 10px;
+  letter-spacing: .15em;
+  opacity: .5;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Mobile menu */
+.mobile-menu-btn { display: none; }
+@media (max-width: 900px) {
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+  }
+  .mobile-menu-btn span {
+    display: block;
+    width: 22px; height: 1.5px;
+    background: var(--green);
+  }
+}
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 76px;
+  left: 0; right: 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 32px;
+  z-index: 49;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+html[lang="fa"] .mobile-nav { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { color: var(--ink-soft); padding: 8px 0; border-bottom: 1px solid var(--rule-soft); }
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  padding: 180px 32px 100px;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 60%;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(26,61,46,.04) 0, transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(138,40,40,.03) 0, transparent 40%);
+  pointer-events: none;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background-image:
+    repeating-linear-gradient(to right,
+      transparent 0,
+      transparent 60px,
+      var(--gold) 60px,
+      var(--gold) 61px,
+      transparent 61px,
+      transparent 70px,
+      var(--gold) 70px,
+      var(--gold) 71px);
+  opacity: 0.18;
+  pointer-events: none;
+  mask-image: linear-gradient(to top, black, transparent);
+  -webkit-mask-image: linear-gradient(to top, black, transparent);
+}
+
+.hero-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .hero { padding: 130px 24px 70px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.hero-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--bordeaux);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+html[lang="fa"] .hero-eyebrow { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: .08em; font-size: 13px; }
+.hero-eyebrow::before {
+  content: "";
+  width: 36px; height: 1px;
+  background: var(--bordeaux);
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: .95;
+  letter-spacing: -.02em;
+  color: var(--green-deep);
+  margin-bottom: 28px;
+}
+html[lang="fa"] .hero h1 { font-family: 'Vazirmatn', sans-serif; font-weight: 600; line-height: 1.1; }
+.hero h1 i {
+  font-style: italic;
+  color: var(--bordeaux);
+  font-weight: 400;
+}
+html[lang="fa"] .hero h1 i { font-style: normal; color: var(--bordeaux); font-weight: 700; }
+
+.hero-lead {
+  font-size: 21px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 540px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+html[lang="fa"] .hero-lead { font-size: 17px; }
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: var(--green);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  transition: all .25s;
+  border: 1px solid var(--green);
+}
+html[lang="fa"] .btn-primary { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 14px; }
+.btn-primary:hover {
+  background: var(--bordeaux);
+  border-color: var(--bordeaux);
+  transform: translateY(-1px);
+}
+.btn-primary .arrow { transition: transform .25s; }
+.btn-primary:hover .arrow { transform: translateX(4px); }
+html[dir="rtl"] .btn-primary:hover .arrow { transform: translateX(-4px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  transition: all .25s;
+}
+html[lang="fa"] .btn-ghost { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 14px; }
+.btn-ghost:hover { background: var(--green); color: var(--cream); }
+
+/* Hero visual */
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: var(--green-deep);
+  overflow: hidden;
+}
+.hero-visual img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(.95) contrast(1.05);
+}
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, rgba(26,61,46,.4));
+  pointer-events: none;
+}
+.hero-visual-frame {
+  position: absolute;
+  inset: 16px;
+  border: 1px solid var(--gold);
+  pointer-events: none;
+  z-index: 2;
+}
+.hero-visual-tag {
+  position: absolute;
+  bottom: 32px; left: 32px;
+  z-index: 3;
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.3;
+  max-width: 220px;
+}
+html[lang="fa"] .hero-visual-tag { font-family: 'Vazirmatn', sans-serif; font-style: normal; }
+.hero-visual-tag::before {
+  content: "";
+  display: block;
+  width: 28px; height: 2px;
+  background: var(--gold);
+  margin-bottom: 14px;
+}
+
+/* ============ SECTION ============ */
+section {
+  padding: 100px 32px;
+  position: relative;
+}
+@media (max-width: 700px) { section { padding: 70px 24px; } }
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--bordeaux);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+html[lang="fa"] .section-eyebrow { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: .08em; font-size: 13px; }
+.section-eyebrow::before {
+  content: "";
+  width: 36px; height: 1px;
+  background: var(--bordeaux);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -.015em;
+  color: var(--green-deep);
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+html[lang="fa"] .section-title { font-family: 'Vazirmatn', sans-serif; font-weight: 600; line-height: 1.15; }
+.section-title i {
+  font-style: italic;
+  color: var(--bordeaux);
+  font-weight: 400;
+}
+html[lang="fa"] .section-title i { font-style: normal; font-weight: 700; }
+
+.section-lead {
+  font-size: 19px;
+  color: var(--ink-soft);
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+html[lang="fa"] .section-lead { font-size: 16px; }
+
+/* ============ ABOUT (split layout) ============ */
+.about {
+  background: var(--green-deep);
+  color: var(--cream);
+  position: relative;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 6px; height: 100%;
+  background: var(--bordeaux);
+}
+html[dir="rtl"] .about::before { left: auto; right: 0; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.about .section-eyebrow { color: var(--gold); }
+.about .section-eyebrow::before { background: var(--gold); }
+.about .section-title { color: var(--cream); }
+.about .section-title i { color: var(--gold); }
+
+.about-text p {
+  color: rgba(245,236,217,.85);
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  max-width: 560px;
+}
+
+.about-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--green);
+}
+.about-image img { width: 100%; height: 100%; object-fit: cover; }
+.about-image::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid var(--gold);
+  pointer-events: none;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(196,160,90,.25);
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+html[lang="fa"] .stat-num { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(245,236,217,.7);
+  line-height: 1.4;
+}
+html[lang="fa"] .stat-label { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 13px; }
+
+/* ============ WHY US ============ */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+@media (max-width: 700px) { .why-grid { grid-template-columns: 1fr; } }
+
+.why-card {
+  background: var(--paper);
+  padding: 40px 36px;
+  position: relative;
+  transition: background .3s;
+}
+.why-card:hover { background: var(--cream); }
+.why-card .icon {
+  width: 18px; height: 18px;
+  background: var(--bordeaux);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  margin-bottom: 18px;
+}
+.why-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--green-deep);
+  margin-bottom: 12px;
+  letter-spacing: -.005em;
+}
+html[lang="fa"] .why-card h3 { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+.why-card p {
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ============ PRODUCTS ============ */
+.products { background: var(--cream); }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+@media (max-width: 900px) { .products-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }
+
+.product-card {
+  background: var(--paper);
+  padding: 32px;
+  border: 1px solid var(--rule-soft);
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 3px;
+  background: var(--gold);
+  transition: width .35s;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px -20px rgba(26,61,46,.3);
+}
+.product-card:hover::before { width: 100%; }
+
+.product-card .symbol {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: var(--bordeaux);
+  line-height: 1;
+}
+.product-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+  letter-spacing: -.01em;
+}
+html[lang="fa"] .product-card h3 { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+
+.product-card .origin {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  display: block;
+}
+html[lang="fa"] .product-card .origin { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 12px; }
+
+.product-card p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.product-card ul {
+  list-style: none;
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 16px;
+}
+.product-card li {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  padding: 5px 0;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+html[lang="fa"] .product-card li { font-family: 'Vazirmatn', sans-serif; font-size: 13px; }
+.product-card li span { color: var(--ink); font-weight: 500; }
+
+/* ============ PISTACHIO DEEP DIVE ============ */
+.pistachio-deep {
+  background: var(--paper);
+  position: relative;
+}
+
+.pistachio-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--rule);
+}
+.pistachio-tab {
+  padding: 14px 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all .2s;
+}
+html[lang="fa"] .pistachio-tab { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 13px; }
+.pistachio-tab.active {
+  color: var(--green-deep);
+  border-bottom-color: var(--bordeaux);
+}
+.pistachio-tab:hover { color: var(--green); }
+
+.pistachio-content { display: none; }
+.pistachio-content.active { display: block; animation: fadeIn .4s; }
+@keyframes fadeIn { from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;} }
+
+.grades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+.grade-cell {
+  background: var(--cream);
+  border: 1px solid var(--rule-soft);
+  padding: 24px 18px;
+  text-align: center;
+  transition: all .25s;
+}
+.grade-cell:hover {
+  background: var(--green);
+  color: var(--cream);
+  border-color: var(--green);
+}
+.grade-cell .code {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 38px;
+  color: var(--bordeaux);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+html[lang="fa"] .grade-cell .code { font-family: 'Vazirmatn', sans-serif; font-weight: 700; }
+.grade-cell:hover .code { color: var(--gold); }
+.grade-cell .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+html[lang="fa"] .grade-cell .label { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 12px; }
+.grade-cell:hover .label { color: rgba(245,236,217,.85); }
+
+/* Sizes */
+.sizes-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+@media (max-width: 700px) { .sizes-row { grid-template-columns: repeat(2, 1fr); } }
+.size-cell {
+  background: var(--green);
+  color: var(--cream);
+  padding: 28px 16px;
+  text-align: center;
+  border: 1px solid var(--green-2);
+  position: relative;
+}
+.size-cell .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: .02em;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+html[lang="fa"] .size-cell .num { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+.size-cell .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(245,236,217,.7);
+}
+html[lang="fa"] .size-cell .label { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 12px; }
+
+/* Process */
+.process-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 700px) { .process-row { grid-template-columns: 1fr; } }
+.process-cell {
+  background: var(--cream);
+  padding: 32px 28px;
+  border-left: 3px solid var(--bordeaux);
+  transition: all .25s;
+}
+html[dir="rtl"] .process-cell { border-left: none; border-right: 3px solid var(--bordeaux); }
+.process-cell:hover { background: var(--paper); }
+.process-cell h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+}
+html[lang="fa"] .process-cell h4 { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+.process-cell p {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ============ PRICE LIST ============ */
+.pricing { background: var(--cream); }
+
+.pricing-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.pricing-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+html[lang="fa"] .pricing-meta { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 13px; }
+.pricing-meta strong { color: var(--bordeaux); font-weight: 600; }
+
+.pricing-table-wrap {
+  background: var(--paper);
+  border: 1px solid var(--rule-soft);
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+table.pricing {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  min-width: 720px;
+}
+html[lang="fa"] table.pricing { font-family: 'Vazirmatn', sans-serif; font-size: 14px; }
+.pricing-category {
+  background: var(--green);
+  color: var(--cream);
+  padding: 14px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+html[lang="fa"] .pricing-category { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 13px; }
+.pricing-category .origin {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: .05em;
+  text-transform: none;
+  color: var(--gold);
+  margin-left: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+}
+html[lang="fa"] .pricing-category .origin { font-family: 'Vazirmatn', sans-serif; }
+table.pricing th {
+  text-align: left;
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--rule);
+  background: var(--cream);
+  white-space: nowrap;
+}
+html[dir="rtl"] table.pricing th { text-align: right; }
+html[lang="fa"] table.pricing th { text-transform: none; letter-spacing: 0; font-size: 12px; }
+table.pricing td {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--rule-soft);
+  vertical-align: middle;
+}
+table.pricing tr:last-child td { border-bottom: none; }
+table.pricing tr:hover td { background: rgba(196,160,90,.05); }
+.ref-cell {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--bordeaux);
+  letter-spacing: .03em;
+}
+html[lang="fa"] .ref-cell { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+.price-cell {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--green-deep);
+  font-size: 16px;
+  text-align: right;
+}
+html[lang="fa"] .price-cell { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+html[dir="rtl"] .price-cell { text-align: left; }
+.price-cell .currency {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-weight: 400;
+  margin-left: 2px;
+}
+.stock-cell {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 500;
+}
+html[lang="fa"] .stock-cell { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 12px; }
+.stock-cell::before {
+  content: "●";
+  margin-right: 6px;
+  color: var(--green);
+}
+
+.pricing-note {
+  background: rgba(196,160,90,.1);
+  border-left: 3px solid var(--gold);
+  padding: 18px 24px;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+html[dir="rtl"] .pricing-note { border-left: none; border-right: 3px solid var(--gold); }
+html[lang="fa"] .pricing-note { font-style: normal; font-size: 15px; }
+
+.pdf-downloads {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.pdf-card {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  transition: all .25s;
+}
+.pdf-card:hover {
+  background: var(--green);
+  color: var(--cream);
+  border-color: var(--green);
+}
+.pdf-icon {
+  width: 44px; height: 44px;
+  background: var(--bordeaux);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .05em;
+  flex-shrink: 0;
+  transition: background .25s;
+}
+.pdf-card:hover .pdf-icon { background: var(--gold); color: var(--green-deep); }
+.pdf-card .pdf-text {
+  flex: 1;
+  min-width: 0;
+}
+.pdf-card .pdf-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+html[lang="fa"] .pdf-card .pdf-title { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+.pdf-card .pdf-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  opacity: .65;
+}
+html[lang="fa"] .pdf-card .pdf-meta { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 12px; }
+.pdf-card .arrow { transition: transform .25s; }
+.pdf-card:hover .arrow { transform: translateX(4px); }
+html[dir="rtl"] .pdf-card:hover .arrow { transform: translateX(-4px); }
+
+/* ============ SAFFRON ============ */
+.saffron {
+  background: var(--bordeaux);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.saffron::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 40%;
+  background-image:
+    repeating-linear-gradient(120deg,
+      transparent 0,
+      transparent 22px,
+      rgba(196,160,90,.12) 22px,
+      rgba(196,160,90,.12) 23px);
+  pointer-events: none;
+}
+.saffron .section-eyebrow { color: var(--gold-soft); }
+.saffron .section-eyebrow::before { background: var(--gold-soft); }
+.saffron .section-title { color: var(--cream); }
+.saffron .section-title i { color: var(--gold); }
+.saffron .section-lead { color: rgba(245,236,217,.85); }
+
+.saffron-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+@media (max-width: 700px) { .saffron-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .saffron-grid { grid-template-columns: 1fr; } }
+
+.saffron-card {
+  background: rgba(245,236,217,.06);
+  border: 1px solid rgba(196,160,90,.3);
+  padding: 28px 24px;
+  transition: all .25s;
+}
+.saffron-card:hover {
+  background: rgba(245,236,217,.12);
+  border-color: var(--gold);
+}
+.saffron-card .name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+html[lang="fa"] .saffron-card .name { font-family: 'Vazirmatn', sans-serif; font-weight: 600; }
+.saffron-card .desc {
+  font-size: 14px;
+  color: rgba(245,236,217,.75);
+  line-height: 1.55;
+}
+
+/* ============ CONTACT ============ */
+.contact {
+  background: var(--green-deep);
+  color: var(--cream);
+  position: relative;
+}
+.contact .section-eyebrow { color: var(--gold); }
+.contact .section-eyebrow::before { background: var(--gold); }
+.contact .section-title { color: var(--cream); }
+.contact .section-title i { color: var(--gold); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  margin-top: 40px;
+}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 50px; } }
+
+.contact-info {
+  font-size: 17px;
+  line-height: 1.7;
+}
+.contact-info-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(196,160,90,.2);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.contact-info-item:first-child { padding-top: 0; }
+.contact-info-item:last-child { border-bottom: none; }
+.contact-icon {
+  width: 32px; height: 32px;
+  border: 1px solid rgba(196,160,90,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gold);
+  font-size: 14px;
+}
+.contact-info-item .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: rgba(245,236,217,.55);
+  margin-bottom: 4px;
+  display: block;
+}
+html[lang="fa"] .contact-info-item .label { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 12px; }
+.contact-info-item .value {
+  color: var(--cream);
+  font-size: 17px;
+  font-weight: 500;
+}
+.contact-info-item a.value { transition: color .2s; }
+.contact-info-item a.value:hover { color: var(--gold); }
+
+.contact-form {
+  background: rgba(245,236,217,.04);
+  padding: 36px;
+  border: 1px solid rgba(196,160,90,.25);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+.form-field {
+  margin-bottom: 16px;
+}
+.form-field label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+html[lang="fa"] .form-field label { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 12px; }
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  background: rgba(245,236,217,.05);
+  border: 1px solid rgba(196,160,90,.3);
+  color: var(--cream);
+  padding: 12px 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  border-radius: 0;
+}
+html[lang="fa"] .form-field input,
+html[lang="fa"] .form-field textarea,
+html[lang="fa"] .form-field select { font-family: 'Vazirmatn', sans-serif; }
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: var(--gold);
+  background: rgba(245,236,217,.08);
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(245,236,217,.35);
+  font-style: italic;
+}
+html[lang="fa"] .form-field input::placeholder,
+html[lang="fa"] .form-field textarea::placeholder { font-style: normal; }
+.form-field select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23c4a05a' d='M6 8L0 0h12z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+html[dir="rtl"] .form-field select { background-position: left 14px center; padding-right: 14px; padding-left: 36px; }
+.form-field select option { background: var(--green-deep); color: var(--cream); }
+
+.form-submit {
+  background: var(--gold);
+  color: var(--green-deep);
+  border: none;
+  padding: 16px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all .25s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+html[lang="fa"] .form-submit { font-family: 'Vazirmatn', sans-serif; text-transform: none; letter-spacing: 0; font-size: 14px; }
+.form-submit:hover {
+  background: var(--cream);
+}
+.form-submit:disabled { opacity: .6; cursor: default; }
+
+.form-success {
+  display: none;
+  padding: 16px 20px;
+  background: rgba(196,160,90,.15);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 16px;
+}
+html[lang="fa"] .form-success { font-family: 'Vazirmatn', sans-serif; font-style: normal; font-size: 15px; }
+.form-success.show { display: block; }
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 60px 32px 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+}
+html[lang="fa"] footer { font-family: 'Vazirmatn', sans-serif; }
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(245,236,217,.1);
+}
+@media (max-width: 700px) { .footer-inner { grid-template-columns: 1fr; gap: 28px; } }
+
+.footer-brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.footer-brand-name span { color: var(--gold); }
+.footer-brand-tag {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+html[lang="fa"] .footer-brand-tag { text-transform: none; letter-spacing: 0; font-size: 12px; }
+.footer-desc {
+  color: rgba(245,236,217,.6);
+  line-height: 1.6;
+  font-size: 14px;
+  max-width: 380px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+html[lang="fa"] .footer-desc { font-family: 'Vazirmatn', sans-serif; font-style: normal; }
+
+.footer-col h5 {
+  font-size: 10px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+html[lang="fa"] .footer-col h5 { text-transform: none; letter-spacing: 0; font-size: 12px; }
+.footer-col ul { list-style: none; }
+.footer-col li { padding: 5px 0; }
+.footer-col a {
+  color: rgba(245,236,217,.7);
+  font-size: 13px;
+  transition: color .2s;
+}
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 11px;
+  color: rgba(245,236,217,.4);
+  letter-spacing: .05em;
+}
+
+/* ============ I18N ============ */
+[data-lang]:not(.show) { display: none; }
+
+/* ============ SCROLL REVEAL ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s cubic-bezier(0.25,0.46,0.45,0.94), transform .8s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.reveal.in { opacity: 1; transform: none; }
+
+/* ============ MOBILE TWEAKS ============ */
+@media (max-width: 700px) {
+  .header-inner { padding: 14px 20px; }
+  .brand-name { font-size: 16px; }
+  .brand-tag { font-size: 8px; }
+  .tulip-logo { width: 32px; height: 32px; }
+  .lang-btn { padding: 6px 10px; font-size: 10px; }
+  .pdf-card { min-width: 100%; }
+  .contact-form { padding: 26px 22px; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand-logo">
+      <!-- Tulip-pistachio logo SVG -->
+      <svg class="tulip-logo" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer leaves -->
+        <path d="M12 50 Q8 28 14 14 Q16 22 18 28 Q20 22 22 16 Q24 26 24 36 Q22 46 12 50 Z" fill="#1a3d2e"/>
+        <path d="M48 50 Q52 28 46 14 Q44 22 42 28 Q40 22 38 16 Q36 26 36 36 Q38 46 48 50 Z" fill="#1a3d2e"/>
+        <!-- Inner red accents -->
+        <path d="M14 14 Q15 10 16 14 Q15 18 14 14 Z" fill="#8a2828"/>
+        <path d="M46 14 Q45 10 44 14 Q45 18 46 14 Z" fill="#8a2828"/>
+        <!-- Center pistachio -->
+        <ellipse cx="30" cy="32" rx="10" ry="14" fill="#c4a05a"/>
+        <path d="M30 22 Q32 28 30 42 Q28 28 30 22 Z" fill="#8a2828" opacity=".7"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">Nirvanut <span>Trading</span></div>
+        <div class="brand-tag">
+          <span data-lang="en" class="show">Nuts &amp; Dried Fruits Supplier</span>
+          <span data-lang="fr">Fruits Secs &amp; Fruits à Coque</span>
+          <span data-lang="fa">تأمین‌کننده آجیل و میوه‌های خشک</span>
+        </div>
+      </div>
+    </a>
+
+```
+<nav class="main-nav">
+  <a href="#about"><span data-lang="en" class="show">About</span><span data-lang="fr">À propos</span><span data-lang="fa">درباره</span></a>
+  <a href="#products"><span data-lang="en" class="show">Products</span><span data-lang="fr">Produits</span><span data-lang="fa">محصولات</span></a>
+  <a href="#pistachio"><span data-lang="en" class="show">Pistachio</span><span data-lang="fr">Pistache</span><span data-lang="fa">پسته</span></a>
+  <a href="#pricing"><span data-lang="en" class="show">Pricing</span><span data-lang="fr">Tarifs</span><span data-lang="fa">قیمت</span></a>
+  <a href="#saffron">Saffron</a>
+  <a href="#contact"><span data-lang="en" class="show">Contact</span><span data-lang="fr">Contact</span><span data-lang="fa">تماس</span></a>
+</nav>
+
+<div style="display:flex; align-items:center; gap:12px;">
+  <div class="lang-wrap">
+    <button class="lang-btn" id="langBtn">
+      <span id="langCurrent">EN</span> ▾
+    </button>
+    <div class="lang-menu" id="langMenu">
+      <button data-set-lang="en" class="active">English <span class="code">EN</span></button>
+      <button data-set-lang="fr">Français <span class="code">FR</span></button>
+      <button data-set-lang="fa">فارسی <span class="code">FA</span></button>
+    </div>
+  </div>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+```
+
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#about"><span data-lang="en" class="show">About</span><span data-lang="fr">À propos</span><span data-lang="fa">درباره</span></a>
+    <a href="#products"><span data-lang="en" class="show">Products</span><span data-lang="fr">Produits</span><span data-lang="fa">محصولات</span></a>
+    <a href="#pistachio"><span data-lang="en" class="show">Pistachio</span><span data-lang="fr">Pistache</span><span data-lang="fa">پسته</span></a>
+    <a href="#pricing"><span data-lang="en" class="show">Pricing</span><span data-lang="fr">Tarifs</span><span data-lang="fa">قیمت</span></a>
+    <a href="#saffron">Saffron</a>
+    <a href="#contact"><span data-lang="en" class="show">Contact</span><span data-lang="fr">Contact</span><span data-lang="fa">تماس</span></a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <span data-lang="en" class="show">France-based · Direct from origin</span>
+        <span data-lang="fr">Basé en France · Direct origine</span>
+        <span data-lang="fa">مستقر در فرانسه · مستقیم از مبدأ</span>
+      </div>
+      <h1>
+        <span data-lang="en" class="show">From <i>origin</i><br>to market</span>
+        <span data-lang="fr">De l'<i>origine</i><br>au marché</span>
+        <span data-lang="fa">از <i>مبدأ</i><br>تا بازار</span>
+      </h1>
+      <p class="hero-lead">
+        <span data-lang="en" class="show">Premium nuts and dried fruits, sourced directly from trusted producers. A human-scale partner for industry, wholesale and retail — built on reliability, transparency, and personalized service.</span>
+        <span data-lang="fr">Fruits secs et fruits à coque premium, sourcés en direct chez des producteurs de confiance. Un partenaire à taille humaine pour l'industrie, le négoce et la distribution — fondé sur la fiabilité, la transparence et le service sur-mesure.</span>
+        <span data-lang="fa">آجیل و میوه‌های خشک ممتاز، مستقیماً از تولیدکنندگان معتبر. یک شریک قابل اعتماد برای صنعت، عمده‌فروشی و خرده‌فروشی — مبتنی بر اعتماد، شفافیت و خدمات شخصی‌سازی‌شده.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">
+          <span data-lang="en" class="show">Request a quote</span>
+          <span data-lang="fr">Demander un devis</span>
+          <span data-lang="fa">درخواست قیمت</span>
+          <span class="arrow">→</span>
+        </a>
+        <a href="#products" class="btn-ghost">
+          <span data-lang="en" class="show">Our products</span>
+          <span data-lang="fr">Nos produits</span>
+          <span data-lang="fa">محصولات ما</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=1200&q=80" alt="Pistachios">
+      <div class="hero-visual-frame"></div>
+      <div class="hero-visual-tag">
+        <span data-lang="en" class="show">Rooted in pistachio expertise.</span>
+        <span data-lang="fr">L'expertise pistache à la racine.</span>
+        <span data-lang="fa">ریشه در تخصص پسته.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=80" alt="Pistachios on tree">
+      </div>
+      <div class="about-text">
+        <div class="section-eyebrow">
+          <span data-lang="en" class="show">About Nirvanut</span>
+          <span data-lang="fr">À propos de Nirvanut</span>
+          <span data-lang="fa">درباره نیروانوت</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en" class="show">A <i>human-scale</i> partner for serious traders</span>
+          <span data-lang="fr">Un partenaire <i>à taille humaine</i> pour les négociants exigeants</span>
+          <span data-lang="fa">شریکی <i>در ابعاد انسانی</i> برای تاجران جدی</span>
+        </h2>
+        <p>
+          <span data-lang="en" class="show">Nirvanut Trading is a France-based supplier of premium nuts and dried fruits, sourcing directly from trusted producers in key origin countries.</span>
+          <span data-lang="fr">Nirvanut Trading est un fournisseur basé en France de fruits secs et fruits à coque premium, en lien direct avec des producteurs de confiance dans les principaux pays d'origine.</span>
+          <span data-lang="fa">نیروانوت ترِیدینگ تأمین‌کننده‌ای مستقر در فرانسه است که آجیل و میوه‌های خشک ممتاز را مستقیماً از تولیدکنندگان معتبر در کشورهای مبدأ تأمین می‌کند.</span>
+        </p>
+        <p>
+          <span data-lang="en" class="show">As a human-scale company, we focus on building long-term partnerships through reliability, transparency, and personalized service. Our flexible sourcing model adapts to each client's specific needs.</span>
+          <span data-lang="fr">Entreprise à taille humaine, nous construisons des partenariats durables fondés sur la fiabilité, la transparence et un service personnalisé. Notre modèle d'approvisionnement flexible s'adapte aux besoins de chaque client.</span>
+          <span data-lang="fa">به عنوان شرکتی در ابعاد انسانی، تمرکز ما بر ایجاد شراکت‌های بلندمدت از طریق اعتماد، شفافیت و خدمات شخصی است.</span>
+        </p>
+        <p>
+          <span data-lang="en" class="show">Originally rooted in pistachio expertise, we continuously expand our portfolio to include almonds, hazelnuts, cashews, pecans, and saffron. Our ambition is simple: to deliver consistent quality with the responsiveness of a dedicated partner.</span>
+          <span data-lang="fr">Issus de l'expertise pistache, nous élargissons en continu notre gamme : amandes, noisettes, noix de cajou, noix de pécan, safran. Notre ambition est simple : livrer une qualité constante avec la réactivité d'un partenaire dédié.</span>
+          <span data-lang="fa">ما در اصل ریشه در تخصص پسته داریم و به طور مداوم سبد محصولات خود را با بادام، فندق، بادام هندی و زعفران گسترش می‌دهیم.</span>
+        </p>
+
+```
+    <div class="about-stats">
+      <div>
+        <div class="stat-num">7+</div>
+        <div class="stat-label">
+          <span data-lang="en" class="show">Product categories</span>
+          <span data-lang="fr">Catégories produits</span>
+          <span data-lang="fa">دسته‌بندی محصول</span>
+        </div>
+      </div>
+      <div>
+        <div class="stat-num">5+</div>
+        <div class="stat-label">
+          <span data-lang="en" class="show">Origin countries</span>
+          <span data-lang="fr">Pays d'origine</span>
+          <span data-lang="fa">کشور مبدأ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+
+<section>
+  <div class="container">
+    <div class="section-eyebrow">
+      <span data-lang="en" class="show">Why choose us</span>
+      <span data-lang="fr">Pourquoi nous choisir</span>
+      <span data-lang="fa">چرا ما را انتخاب کنید</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="show">Four <i>commitments</i> we never compromise</span>
+      <span data-lang="fr">Quatre <i>engagements</i> sans compromis</span>
+      <span data-lang="fa">چهار <i>تعهد</i> بدون مصالحه</span>
+    </h2>
+
+```
+<div class="why-grid">
+  <div class="why-card">
+    <div class="icon"></div>
+    <h3>
+      <span data-lang="en" class="show">Direct &amp; reliable sourcing</span>
+      <span data-lang="fr">Sourcing direct &amp; fiable</span>
+      <span data-lang="fa">تأمین مستقیم و قابل اعتماد</span>
+    </h3>
+    <p>
+      <span data-lang="en" class="show">We work closely with trusted producers and processors in origin countries, ensuring full traceability and consistent product quality.</span>
+      <span data-lang="fr">Nous travaillons en lien étroit avec des producteurs et transformateurs de confiance dans les pays d'origine, garantissant une traçabilité totale et une qualité constante.</span>
+      <span data-lang="fa">با تولیدکنندگان معتبر در کشورهای مبدأ از نزدیک کار می‌کنیم تا قابلیت ردیابی کامل و کیفیت پایدار محصول را تضمین کنیم.</span>
+    </p>
+  </div>
+  <div class="why-card">
+    <div class="icon"></div>
+    <h3>
+      <span data-lang="en" class="show">Quality &amp; compliance first</span>
+      <span data-lang="fr">Qualité &amp; conformité d'abord</span>
+      <span data-lang="fa">کیفیت و انطباق در اولویت</span>
+    </h3>
+    <p>
+      <span data-lang="en" class="show">All products are selected according to strict quality standards and can be supported by laboratory analysis and EU compliance documentation.</span>
+      <span data-lang="fr">Tous nos produits sont sélectionnés selon des standards de qualité stricts et peuvent être appuyés par des analyses en laboratoire et la documentation de conformité UE.</span>
+      <span data-lang="fa">تمام محصولات بر اساس استانداردهای کیفی سختگیرانه انتخاب می‌شوند و با تحلیل آزمایشگاهی و مستندات انطباق با اتحادیه اروپا پشتیبانی می‌شوند.</span>
+    </p>
+  </div>
+  <div class="why-card">
+    <div class="icon"></div>
+    <h3>
+      <span data-lang="en" class="show">Flexible supply solutions</span>
+      <span data-lang="fr">Solutions d'approvisionnement flexibles</span>
+      <span data-lang="fa">راهکارهای تأمین انعطاف‌پذیر</span>
+    </h3>
+    <p>
+      <span data-lang="en" class="show">From bulk shipments to tailored packaging and private label projects, we adapt to industrial, wholesale, and retail requirements.</span>
+      <span data-lang="fr">Des expéditions en vrac aux conditionnements sur-mesure et projets de marque distributeur, nous nous adaptons aux exigences industrielles, négoce et retail.</span>
+      <span data-lang="fa">از محموله‌های فله تا بسته‌بندی سفارشی و پروژه‌های برند خصوصی، با نیازهای صنعتی، عمده‌فروشی و خرده‌فروشی سازگار می‌شویم.</span>
+    </p>
+  </div>
+  <div class="why-card">
+    <div class="icon"></div>
+    <h3>
+      <span data-lang="en" class="show">Long-term partnership</span>
+      <span data-lang="fr">Partenariats long terme</span>
+      <span data-lang="fa">شراکت بلندمدت</span>
+    </h3>
+    <p>
+      <span data-lang="en" class="show">We prioritize transparency, responsiveness, and stability to build sustainable business relationships with our clients.</span>
+      <span data-lang="fr">Nous privilégions la transparence, la réactivité et la stabilité pour construire des relations commerciales durables.</span>
+      <span data-lang="fa">شفافیت، پاسخگویی و ثبات را برای ایجاد روابط تجاری پایدار با مشتریان در اولویت قرار می‌دهیم.</span>
+    </p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span data-lang="en" class="show">Our portfolio</span>
+      <span data-lang="fr">Notre gamme</span>
+      <span data-lang="fa">سبد محصولات</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="show">A curated <i>portfolio</i><br>of premium nuts</span>
+      <span data-lang="fr">Une <i>gamme sélectionnée</i><br>de fruits à coque</span>
+      <span data-lang="fa">سبدی <i>گزیده</i><br>از آجیل‌های ممتاز</span>
+    </h2>
+
+```
+<div class="products-grid">
+  <div class="product-card">
+    <div class="symbol">◗</div>
+    <h3>Pistachio</h3>
+    <span class="origin">Iran</span>
+    <p>
+      <span data-lang="en" class="show">Long varieties (Ahmad Aghaii, Akbari, Badami) and round (Fandoghi, Kalleghoochi). In shell, kernel, paste, dice, sticks, and powder.</span>
+      <span data-lang="fr">Variétés longues (Ahmad Aghaii, Akbari, Badami) et rondes (Fandoghi, Kalleghoochi). En coque, décortiquée, pâte, dés, bâtonnets et poudre.</span>
+      <span data-lang="fa">انواع بلند (احمدآقایی، اکبری، بادامی) و گرد (فندقی، کله‌قوچی). با پوست، مغز، خمیر، خرد و پودر.</span>
+    </p>
+    <ul>
+      <li><span data-lang="en" class="show">Sizes</span><span data-lang="fr">Calibres</span><span data-lang="fa">سایز</span><span>20/22 — 30/32</span></li>
+      <li><span data-lang="en" class="show">Grades</span><span data-lang="fr">Qualités</span><span data-lang="fa">کیفیت</span><span>S, A, B, C, D, H/F</span></li>
+      <li><span data-lang="en" class="show">Forms</span><span data-lang="fr">Formes</span><span data-lang="fa">اشکال</span><span>6+</span></li>
+    </ul>
+  </div>
+
+  <div class="product-card">
+    <div class="symbol">◗</div>
+    <h3>
+      <span data-lang="en" class="show">Almond</span>
+      <span data-lang="fr">Amande</span>
+      <span data-lang="fa">بادام</span>
+    </h3>
+    <span class="origin">USA</span>
+    <p>
+      <span data-lang="en" class="show">Natural whole, Carmel 23/25, blanched, sliced, chopped, sticks, and fine powder. Versatile, food-grade, ready for industrial use.</span>
+      <span data-lang="fr">Naturelle entière, Carmel 23/25, blanchie, effilée, hachée, bâtonnets, poudre fine. Polyvalente, qualité alimentaire, prête pour l'industrie.</span>
+      <span data-lang="fa">طبیعی، کارمل، بلانش، خرد، پودر. آماده برای صنعت.</span>
+    </p>
+    <ul>
+      <li><span data-lang="en" class="show">Forms</span><span data-lang="fr">Formes</span><span data-lang="fa">اشکال</span><span>7+</span></li>
+      <li><span data-lang="en" class="show">Packaging</span><span data-lang="fr">Conditionnement</span><span data-lang="fa">بسته‌بندی</span><span>10–22.7 kg</span></li>
+    </ul>
+  </div>
+
+  <div class="product-card">
+    <div class="symbol">◗</div>
+    <h3>
+      <span data-lang="en" class="show">Hazelnut</span>
+      <span data-lang="fr">Noisette</span>
+      <span data-lang="fa">فندق</span>
+    </h3>
+    <span class="origin">Turkey · Italy</span>
+    <p>
+      <span data-lang="en" class="show">Whole hazelnuts (Azerbaijan 9/11, Piedmont 13/15), blanched, and powder. Premium-grade origins for confectionery and industry.</span>
+      <span data-lang="fr">Noisettes entières (Azerbaïdjan 9/11, Piémont 13/15), blanchies et poudre. Origines premium pour la confiserie et l'industrie.</span>
+      <span data-lang="fa">فندق کامل (آذربایجان، پیمونت)، بلانش و پودر. منشأ ممتاز.</span>
+    </p>
+    <ul>
+      <li><span data-lang="en" class="show">Calibres</span><span data-lang="fr">Calibres</span><span data-lang="fa">سایز</span><span>9/11, 13/15</span></li>
+      <li><span data-lang="en" class="show">Forms</span><span data-lang="fr">Formes</span><span data-lang="fa">اشکال</span><span>5+</span></li>
+    </ul>
+  </div>
+
+  <div class="product-card">
+    <div class="symbol">◗</div>
+    <h3>Cashew</h3>
+    <span class="origin">Vietnam</span>
+    <p>
+      <span data-lang="en" class="show">Premium WW180 and WW240 grades — whole white kernels — plus concassé (small pieces) for industrial and confectionery use.</span>
+      <span data-lang="fr">Qualités WW180 et WW240 — noix entières blanches — ainsi que concassé (petites pièces) pour usage industriel et confiserie.</span>
+      <span data-lang="fa">گریدهای WW180 و WW240 — مغز کامل سفید — و خرد شده برای صنعت.</span>
+    </p>
+    <ul>
+      <li><span data-lang="en" class="show">Grades</span><span data-lang="fr">Qualités</span><span data-lang="fa">گرید</span><span>WW180, WW240</span></li>
+      <li><span data-lang="en" class="show">Pack</span><span data-lang="fr">Pack</span><span data-lang="fa">بسته</span><span>22.68 kg</span></li>
+    </ul>
+  </div>
+
+  <div class="product-card">
+    <div class="symbol">◗</div>
+    <h3>Pecan</h3>
+    <span class="origin">USA</span>
+    <p>
+      <span data-lang="en" class="show">Whole pecan halves and pecan powder, vacuum-packed for freshness. Origin USA, suitable for premium pastry and snack lines.</span>
+      <span data-lang="fr">Noix de pécan entières et poudre, sous vide pour la fraîcheur. Origine USA, idéales pâtisserie premium et snacking.</span>
+      <span data-lang="fa">گردوی پکان کامل و پودر، با بسته‌بندی وکیوم.</span>
+    </p>
+    <ul>
+      <li><span data-lang="en" class="show">Forms</span><span data-lang="fr">Formes</span><span data-lang="fa">اشکال</span><span>2</span></li>
+      <li><span data-lang="en" class="show">Pack</span><span data-lang="fr">Pack</span><span data-lang="fa">بسته</span><span>13.6 kg</span></li>
+    </ul>
+  </div>
+
+  <div class="product-card">
+    <div class="symbol">◗</div>
+    <h3>
+      Saffron
+    </h3>
+    <span class="origin">Iran</span>
+    <p>
+      <span data-lang="en" class="show">Premium Iranian saffron in five grades — Negin, Sargol, Poushali, Bunch, and Konj. Export-grade purity, ISO-compliant on request.</span>
+      <span data-lang="fr">Safran iranien premium en cinq grades — Negin, Sargol, Poushali, Bunch, Konj. Pureté export, conformité ISO sur demande.</span>
+      <span data-lang="fa">زعفران ایرانی ممتاز در پنج درجه — نگین، سرگل، پوشالی، دسته، کنج.</span>
+    </p>
+    <ul>
+      <li><span data-lang="en" class="show">Grades</span><span data-lang="fr">Grades</span><span data-lang="fa">گرید</span><span>5</span></li>
+      <li><span data-lang="en" class="show">MOQ</span><span data-lang="fr">MOQ</span><span data-lang="fa">حداقل سفارش</span><span>1 kg</span></li>
+    </ul>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ PISTACHIO DEEP DIVE ============ -->
+
+<section class="pistachio-deep" id="pistachio">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span data-lang="en" class="show">Pistachio expertise</span>
+      <span data-lang="fr">Expertise pistache</span>
+      <span data-lang="fa">تخصص پسته</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="show">Iran's <i>green gold</i>,<br>in every form</span>
+      <span data-lang="fr">L'<i>or vert</i> d'Iran,<br>sous toutes ses formes</span>
+      <span data-lang="fa">طلای <i>سبز</i> ایران،<br>در هر شکل</span>
+    </h2>
+    <p class="section-lead">
+      <span data-lang="en" class="show">From in-shell pistachios to peeled green kernels, paste and powder — our pistachio program covers the full spectrum, in all standard grades and sizes.</span>
+      <span data-lang="fr">De la pistache en coque aux amandes vertes décortiquées, pâte et poudre — notre programme pistache couvre tout le spectre, dans tous les grades et calibres standards.</span>
+      <span data-lang="fa">از پسته با پوست تا مغز سبز، خمیر و پودر — برنامه پسته ما تمام طیف را پوشش می‌دهد.</span>
+    </p>
+
+```
+<div class="pistachio-tabs">
+  <button class="pistachio-tab active" data-tab="grades">
+    <span data-lang="en" class="show">Grades</span>
+    <span data-lang="fr">Grades</span>
+    <span data-lang="fa">گرید</span>
+  </button>
+  <button class="pistachio-tab" data-tab="sizes">
+    <span data-lang="en" class="show">Sizes</span>
+    <span data-lang="fr">Calibres</span>
+    <span data-lang="fa">سایز</span>
+  </button>
+  <button class="pistachio-tab" data-tab="process">
+    <span data-lang="en" class="show">Processed</span>
+    <span data-lang="fr">Transformés</span>
+    <span data-lang="fa">فرآوری‌شده</span>
+  </button>
+</div>
+
+<div class="pistachio-content active" data-content="grades">
+  <div class="grades-grid">
+    <div class="grade-cell"><div class="code">S</div><div class="label">Grade 1 · Extra</div></div>
+    <div class="grade-cell"><div class="code">A</div><div class="label">Grade 2 · Extra</div></div>
+    <div class="grade-cell"><div class="code">B</div><div class="label">Grade 3 · Verte</div></div>
+    <div class="grade-cell"><div class="code">C</div><div class="label">Grade 4 · Jaune</div></div>
+    <div class="grade-cell"><div class="code">D</div><div class="label">Grade 5</div></div>
+    <div class="grade-cell"><div class="code">H/F</div><div class="label">Split &amp; half</div></div>
+  </div>
+</div>
+
+<div class="pistachio-content" data-content="sizes">
+  <div class="sizes-row">
+    <div class="size-cell"><div class="num">20/22</div><div class="label">
+      <span data-lang="en" class="show">Jumbo</span>
+      <span data-lang="fr">Jumbo</span>
+      <span data-lang="fa">جامبو</span>
+    </div></div>
+    <div class="size-cell"><div class="num">22/24</div><div class="label">
+      <span data-lang="en" class="show">Extra large</span>
+      <span data-lang="fr">Très gros</span>
+      <span data-lang="fa">خیلی بزرگ</span>
+    </div></div>
+    <div class="size-cell"><div class="num">24/26</div><div class="label">
+      <span data-lang="en" class="show">Large</span>
+      <span data-lang="fr">Gros</span>
+      <span data-lang="fa">بزرگ</span>
+    </div></div>
+    <div class="size-cell"><div class="num">26/28</div><div class="label">
+      <span data-lang="en" class="show">Medium</span>
+      <span data-lang="fr">Moyen</span>
+      <span data-lang="fa">متوسط</span>
+    </div></div>
+    <div class="size-cell"><div class="num">28/30</div><div class="label">
+      <span data-lang="en" class="show">Small</span>
+      <span data-lang="fr">Petit</span>
+      <span data-lang="fa">کوچک</span>
+    </div></div>
+    <div class="size-cell"><div class="num">30/32</div><div class="label">
+      <span data-lang="en" class="show">Extra small</span>
+      <span data-lang="fr">Très petit</span>
+      <span data-lang="fa">خیلی کوچک</span>
+    </div></div>
+  </div>
+</div>
+
+<div class="pistachio-content" data-content="process">
+  <div class="process-row">
+    <div class="process-cell">
+      <h4>
+        <span data-lang="en" class="show">Pistachio sticks</span>
+        <span data-lang="fr">Bâtonnets de pistache</span>
+        <span data-lang="fa">خلال پسته</span>
+      </h4>
+      <p>
+        <span data-lang="en" class="show">Calibrated cuts for high-end pastry, ice cream, and chocolate-making.</span>
+        <span data-lang="fr">Coupes calibrées pour pâtisserie haut de gamme, glacerie et chocolaterie.</span>
+        <span data-lang="fa">برش‌های یکنواخت برای شیرینی‌پزی، بستنی و شکلات‌سازی.</span>
+      </p>
+    </div>
+    <div class="process-cell">
+      <h4>
+        <span data-lang="en" class="show">Pistachio dice</span>
+        <span data-lang="fr">Pistache concassée</span>
+        <span data-lang="fa">پسته خرد شده</span>
+      </h4>
+      <p>
+        <span data-lang="en" class="show">Small pieces, ideal as topping or inclusion in confectionery and bakery.</span>
+        <span data-lang="fr">Petites pièces, idéales en topping ou inclusion en confiserie et boulangerie.</span>
+        <span data-lang="fa">قطعات کوچک، ایده‌آل برای تزئین یا افزودن به محصولات قنادی.</span>
+      </p>
+    </div>
+    <div class="process-cell">
+      <h4>
+        <span data-lang="en" class="show">Pistachio paste</span>
+        <span data-lang="fr">Pâte de pistache</span>
+        <span data-lang="fa">خمیر پسته</span>
+      </h4>
+      <p>
+        <span data-lang="en" class="show">Pure pistachio paste — base for premium glaces, fillings, and creams.</span>
+        <span data-lang="fr">Pâte pure de pistache — base pour glaces premium, fourrages et crèmes.</span>
+        <span data-lang="fa">خمیر خالص پسته — پایه برای بستنی‌های ممتاز و کرم‌ها.</span>
+      </p>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ PRICE LIST ============ -->
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-intro">
+      <div>
+        <div class="section-eyebrow">
+          <span data-lang="en" class="show">Bulk price list</span>
+          <span data-lang="fr">Tarifs vrac</span>
+          <span data-lang="fa">لیست قیمت فله</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en" class="show">Indicative <i>pricing</i></span>
+          <span data-lang="fr">Tarification <i>indicative</i></span>
+          <span data-lang="fa">قیمت‌گذاری <i>اولیه</i></span>
+        </h2>
+      </div>
+      <div class="pricing-meta">
+        <span data-lang="en" class="show">Reference: <strong>January 2025</strong> · Prices in EUR / kg</span>
+        <span data-lang="fr">Référence : <strong>Janvier 2025</strong> · Prix en EUR / kg</span>
+        <span data-lang="fa">مرجع: <strong>ژانویه ۲۰۲۵</strong> · قیمت‌ها به یورو / کیلوگرم</span>
+      </div>
+    </div>
+
+```
+<div class="pricing-table-wrap">
+  <table class="pricing">
+    <!-- PISTACHIO -->
+    <tr><td colspan="6" class="pricing-category">
+      <span data-lang="en" class="show">Pistachio<span class="origin">Iran origin</span></span>
+      <span data-lang="fr">Pistache<span class="origin">Origine Iran</span></span>
+      <span data-lang="fa">پسته<span class="origin">مبدأ ایران</span></span>
+    </td></tr>
+    <tr>
+      <th>Ref</th>
+      <th><span data-lang="en" class="show">Product</span><span data-lang="fr">Produit</span><span data-lang="fa">محصول</span></th>
+      <th><span data-lang="en" class="show">Pack</span><span data-lang="fr">Cond.</span><span data-lang="fa">بسته</span></th>
+      <th>50 kg</th>
+      <th>200 kg</th>
+      <th>600 kg</th>
+    </tr>
+    <tr><td class="ref-cell">1D</td><td>Pistache décortiquée</td><td>Sachet sous vide</td><td class="price-cell">20.00<span class="currency">€</span></td><td class="price-cell">18.50<span class="currency">€</span></td><td class="price-cell">17.50<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1EMVS</td><td>Pistache émondée Extra verte grade S</td><td>Sachet sous vide</td><td class="price-cell">40.00<span class="currency">€</span></td><td class="price-cell">38.00<span class="currency">€</span></td><td class="price-cell">36.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1EMVA</td><td>Pistache émondée Extra verte grade A</td><td>Sachet sous vide</td><td class="price-cell">39.00<span class="currency">€</span></td><td class="price-cell">37.00<span class="currency">€</span></td><td class="price-cell">35.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1EMVB</td><td>Pistache émondée verte grade B</td><td>Sachet sous vide</td><td class="price-cell">37.50<span class="currency">€</span></td><td class="price-cell">35.50<span class="currency">€</span></td><td class="price-cell">33.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1EMJC</td><td>Pistache émondée jaune grade C</td><td>Sachet sous vide</td><td class="price-cell">35.50<span class="currency">€</span></td><td class="price-cell">33.50<span class="currency">€</span></td><td class="price-cell">31.50<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1EMCCVF</td><td>Pistache concassée verte grade F</td><td>Sachet sous vide</td><td class="price-cell">32.00<span class="currency">€</span></td><td class="price-cell">31.50<span class="currency">€</span></td><td class="price-cell">30.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1EMCCJH</td><td>Pistache concassée jaune grade H</td><td>Sachet sous vide</td><td class="price-cell">30.00<span class="currency">€</span></td><td class="price-cell">29.00<span class="currency">€</span></td><td class="price-cell">27.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1HAD</td><td>Pistache hachée décortiquée</td><td>Carton 10 kg</td><td class="price-cell">21.00<span class="currency">€</span></td><td class="price-cell">20.00<span class="currency">€</span></td><td class="price-cell">18.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">1PD</td><td>Pistache poudre décortiquée</td><td>Carton 10 kg</td><td class="price-cell">20.00<span class="currency">€</span></td><td class="price-cell">19.50<span class="currency">€</span></td><td class="price-cell">19.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">11E</td><td>Pâte de pistache (à base d'émondée)</td><td>Pot 3 kg</td><td class="price-cell">40.00<span class="currency">€</span></td><td class="price-cell">38.00<span class="currency">€</span></td><td class="price-cell">36.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">11D</td><td>Pâte de pistache (à base de décortiquée)</td><td>Pot 3 kg</td><td class="price-cell">28.00<span class="currency">€</span></td><td class="price-cell">26.00<span class="currency">€</span></td><td class="price-cell">24.00<span class="currency">€</span></td></tr>
+
+    <!-- ALMOND -->
+    <tr><td colspan="6" class="pricing-category">
+      <span data-lang="en" class="show">Almond<span class="origin">USA origin</span></span>
+      <span data-lang="fr">Amande<span class="origin">Origine USA</span></span>
+      <span data-lang="fa">بادام<span class="origin">مبدأ آمریکا</span></span>
+    </td></tr>
+    <tr><td class="ref-cell">2E</td><td>Amande naturelle entière mélange taille US</td><td>Vrac 22.68 kg</td><td class="price-cell">9.80<span class="currency">€</span></td><td class="price-cell">9.45<span class="currency">€</span></td><td class="price-cell">9.20<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">2C</td><td>Amande Carmel 23/25</td><td>Vrac 22.68 kg</td><td class="price-cell">8.50<span class="currency">€</span></td><td class="price-cell">8.25<span class="currency">€</span></td><td class="price-cell">8.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">2PBL</td><td>Poudre d'amande blanchie FINE</td><td>Vrac 10 kg</td><td class="price-cell">7.90<span class="currency">€</span></td><td class="price-cell">7.55<span class="currency">€</span></td><td class="price-cell">7.30<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">2BLC</td><td>Amande blanchie entière STD</td><td>Vrac 10 kg</td><td class="price-cell">10.00<span class="currency">€</span></td><td class="price-cell">9.50<span class="currency">€</span></td><td class="price-cell">9.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">2EBL</td><td>Amande effilée blanchie USA</td><td>Vrac 10 kg</td><td class="price-cell">10.50<span class="currency">€</span></td><td class="price-cell">10.15<span class="currency">€</span></td><td class="price-cell">9.25<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">2HABL</td><td>Amande hachée blanchie USA</td><td>Vrac 10 kg</td><td class="price-cell">9.55<span class="currency">€</span></td><td class="price-cell">9.00<span class="currency">€</span></td><td class="price-cell">8.80<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">2BABLUS</td><td>Amande bâtonnets blanchie USA</td><td>Vrac 10 kg</td><td class="price-cell">11.15<span class="currency">€</span></td><td class="price-cell">10.60<span class="currency">€</span></td><td class="price-cell">10.30<span class="currency">€</span></td></tr>
+
+    <!-- HAZELNUT -->
+    <tr><td colspan="6" class="pricing-category">
+      <span data-lang="en" class="show">Hazelnut<span class="origin">Turkey · Italy origin</span></span>
+      <span data-lang="fr">Noisette<span class="origin">Origine Turquie · Italie</span></span>
+      <span data-lang="fa">فندق<span class="origin">مبدأ ترکیه و ایتالیا</span></span>
+    </td></tr>
+    <tr><td class="ref-cell">3EDAZ</td><td>Noisette décortiquée 9/11 Azerbaïdjan</td><td>Sacs 30 kg</td><td class="price-cell">9.80<span class="currency">€</span></td><td class="price-cell">9.45<span class="currency">€</span></td><td class="price-cell">9.20<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">3EDPI</td><td>Noisette décortiquée 13/15 Piémont</td><td>—</td><td class="price-cell">17.25<span class="currency">€</span></td><td class="price-cell">16.90<span class="currency">€</span></td><td class="price-cell">16.60<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">3EBLTU</td><td>Noisette blanchie 13/15 Turquie</td><td>Cartons sous vide 10 kg</td><td class="price-cell">11.00<span class="currency">€</span></td><td class="price-cell">10.50<span class="currency">€</span></td><td class="price-cell">10.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">3EBLPI</td><td>Noisette blanchie 13/15 Piémont</td><td>Sous vide 2×10 kg</td><td class="price-cell">22.50<span class="currency">€</span></td><td class="price-cell">22.00<span class="currency">€</span></td><td class="price-cell">21.30<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">3P</td><td>Noisette poudre</td><td>Sous vide 20 kg</td><td class="price-cell">10.55<span class="currency">€</span></td><td class="price-cell">10.20<span class="currency">€</span></td><td class="price-cell">9.95<span class="currency">€</span></td></tr>
+
+    <!-- PECAN -->
+    <tr><td colspan="6" class="pricing-category">
+      <span data-lang="en" class="show">Pecan<span class="origin">USA origin</span></span>
+      <span data-lang="fr">Pécan<span class="origin">Origine USA</span></span>
+      <span data-lang="fa">پکان<span class="origin">مبدأ آمریکا</span></span>
+    </td></tr>
+    <tr><td class="ref-cell">NPUS</td><td>Noix de pécan</td><td>Sous vide 13.6 kg</td><td class="price-cell">14.00<span class="currency">€</span></td><td class="price-cell">13.50<span class="currency">€</span></td><td class="price-cell">12.50<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">NPPUS</td><td>Poudre de pécan</td><td>Sous vide 2×10 kg</td><td class="price-cell">14.00<span class="currency">€</span></td><td class="price-cell">13.50<span class="currency">€</span></td><td class="price-cell">12.50<span class="currency">€</span></td></tr>
+
+    <!-- CASHEW -->
+    <tr><td colspan="6" class="pricing-category">
+      <span data-lang="en" class="show">Cashew<span class="origin">Vietnam origin</span></span>
+      <span data-lang="fr">Cajou<span class="origin">Origine Vietnam</span></span>
+      <span data-lang="fa">بادام هندی<span class="origin">مبدأ ویتنام</span></span>
+    </td></tr>
+    <tr><td class="ref-cell">NCWW180</td><td>Noix de cajou WW180</td><td>Sous vide 22.68 kg</td><td class="price-cell">12.00<span class="currency">€</span></td><td class="price-cell">11.50<span class="currency">€</span></td><td class="price-cell">10.50<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">NCWW240</td><td>Noix de cajou WW240</td><td>Sous vide 22.68 kg</td><td class="price-cell">11.50<span class="currency">€</span></td><td class="price-cell">11.00<span class="currency">€</span></td><td class="price-cell">10.00<span class="currency">€</span></td></tr>
+    <tr><td class="ref-cell">NCCC</td><td>Noix de cajou concassée (small pieces)</td><td>Sous vide 22.68 kg</td><td class="price-cell">5.00<span class="currency">€</span></td><td class="price-cell">4.80<span class="currency">€</span></td><td class="price-cell">4.20<span class="currency">€</span></td></tr>
+  </table>
+</div>
+
+<div class="pricing-note">
+  <span data-lang="en" class="show">Indicative prices, subject to update. All references in stock at time of publication. Final pricing depends on volume, packaging, incoterms, and current market conditions — please request a formal quote for confirmation.</span>
+  <span data-lang="fr">Prix indicatifs, sujets à mise à jour. Toutes les références sont en stock à la publication. Le prix final dépend du volume, du conditionnement, des incoterms et des conditions de marché — un devis formel est délivré sur demande.</span>
+  <span data-lang="fa">قیمت‌ها اولیه و قابل به‌روزرسانی هستند. تمام مراجع در زمان انتشار موجود هستند. قیمت نهایی به حجم، بسته‌بندی و شرایط بازار بستگی دارد — لطفاً برای تأیید درخواست استعلام رسمی دهید.</span>
+</div>
+
+<div class="pdf-downloads">
+  <a href="price_list.pdf" class="pdf-card" download>
+    <div class="pdf-icon">PDF</div>
+    <div class="pdf-text">
+      <div class="pdf-title">
+        <span data-lang="en" class="show">Full price list</span>
+        <span data-lang="fr">Tarif complet</span>
+        <span data-lang="fa">لیست کامل قیمت</span>
+      </div>
+      <div class="pdf-meta">
+        <span data-lang="en" class="show">January 2025 · Bulk EUR/kg</span>
+        <span data-lang="fr">Janvier 2025 · Vrac EUR/kg</span>
+        <span data-lang="fa">ژانویه ۲۰۲۵</span>
+      </div>
+    </div>
+    <span class="arrow">↓</span>
+  </a>
+  <a href="brochure.pdf" class="pdf-card" download>
+    <div class="pdf-icon">PDF</div>
+    <div class="pdf-text">
+      <div class="pdf-title">
+        <span data-lang="en" class="show">Company brochure</span>
+        <span data-lang="fr">Brochure entreprise</span>
+        <span data-lang="fa">بروشور شرکت</span>
+      </div>
+      <div class="pdf-meta">
+        <span data-lang="en" class="show">Full product catalogue</span>
+        <span data-lang="fr">Catalogue produits complet</span>
+        <span data-lang="fa">کاتالوگ کامل محصولات</span>
+      </div>
+    </div>
+    <span class="arrow">↓</span>
+  </a>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ SAFFRON ============ -->
+
+<section class="saffron" id="saffron">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span data-lang="en" class="show">Nirvanut export</span>
+      <span data-lang="fr">Nirvanut export</span>
+      <span data-lang="fa">صادرات نیروانوت</span>
+    </div>
+    <h2 class="section-title">Saffron — <i>red gold</i><br>of Iran</h2>
+    <p class="section-lead">
+      <span data-lang="en" class="show">Premium Iranian saffron, sorted by hand and graded according to the strictest export standards. Five grades, packed and labeled to your specifications.</span>
+      <span data-lang="fr">Safran iranien premium, trié à la main et calibré selon les standards d'export les plus stricts. Cinq grades, conditionnés et étiquetés selon votre cahier des charges.</span>
+      <span data-lang="fa">زعفران ممتاز ایرانی، مرتب شده با دست و درجه‌بندی شده طبق سخت‌گیرانه‌ترین استانداردهای صادراتی.</span>
+    </p>
+
+```
+<div class="saffron-grid">
+  <div class="saffron-card">
+    <div class="name">Negin</div>
+    <div class="desc">
+      <span data-lang="en" class="show">Long, all-red threads. The finest pure-stigma grade — most prized for color and flavor strength.</span>
+      <span data-lang="fr">Filaments longs, intégralement rouges. Grade pur-stigmate le plus fin — le plus recherché pour sa couleur et sa puissance aromatique.</span>
+      <span data-lang="fa">رشته‌های بلند و قرمز یکدست. ممتازترین درجه.</span>
+    </div>
+  </div>
+  <div class="saffron-card">
+    <div class="name">Sargol</div>
+    <div class="desc">
+      <span data-lang="en" class="show">Pure red stigmas without yellow style. High coloring power, ideal for industry and patisserie.</span>
+      <span data-lang="fr">Stigmates rouges purs sans style jaune. Pouvoir colorant élevé, idéal industrie et pâtisserie.</span>
+      <span data-lang="fa">کلاله‌های قرمز خالص. قدرت رنگ بالا.</span>
+    </div>
+  </div>
+  <div class="saffron-card">
+    <div class="name">Poushali</div>
+    <div class="desc">
+      <span data-lang="en" class="show">Red stigmas with a small portion of yellow style. Strong aroma at a more accessible price point.</span>
+      <span data-lang="fr">Stigmates rouges avec une petite portion de style jaune. Arôme puissant à un prix plus accessible.</span>
+      <span data-lang="fa">کلاله‌های قرمز با مقدار کمی از خامه زرد.</span>
+    </div>
+  </div>
+  <div class="saffron-card">
+    <div class="name">Bunch</div>
+    <div class="desc">
+      <span data-lang="en" class="show">Traditional bouquet form, threads tied together. Authentic presentation, longer style preserved.</span>
+      <span data-lang="fr">Forme traditionnelle en bouquet, filaments liés ensemble. Présentation authentique, style plus long préservé.</span>
+      <span data-lang="fa">فرم سنتی دسته‌ای.</span>
+    </div>
+  </div>
+  <div class="saffron-card">
+    <div class="name">Konj / White</div>
+    <div class="desc">
+      <span data-lang="en" class="show">The yellow root portion separated. Lower coloring power, used in specific applications.</span>
+      <span data-lang="fr">Partie racine jaune séparée. Pouvoir colorant plus faible, usages spécifiques.</span>
+      <span data-lang="fa">قسمت ریشه زرد جدا شده.</span>
+    </div>
+  </div>
+  <div class="saffron-card">
+    <div class="name">
+      <span data-lang="en" class="show">Saffron Flower</div>
+      <span data-lang="fr">Fleur de safran</span>
+      <span data-lang="fa">گل زعفران</span>
+    </div>
+    <div class="desc">
+      <span data-lang="en" class="show">Whole dried flowers — for traditional medicine, infusions, and specialty products.</span>
+      <span data-lang="fr">Fleurs séchées entières — pour médecine traditionnelle, infusions et produits de spécialité.</span>
+      <span data-lang="fa">گل‌های خشک کامل.</span>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-eyebrow">
+      <span data-lang="en" class="show">Get in touch</span>
+      <span data-lang="fr">Nous contacter</span>
+      <span data-lang="fa">تماس با ما</span>
+    </div>
+    <h2 class="section-title">
+      <span data-lang="en" class="show">Let's <i>talk</i> business</span>
+      <span data-lang="fr">Parlons <i>affaires</i></span>
+      <span data-lang="fa">بیایید <i>کسب‌وکار</i> صحبت کنیم</span>
+    </h2>
+    <p class="section-lead" style="color:rgba(245,236,217,.85);">
+      <span data-lang="en" class="show">Request a quote, ask for a sample, or simply start a conversation. We respond within one working day.</span>
+      <span data-lang="fr">Demandez un devis, demandez un échantillon, ou simplement entamez la conversation. Nous répondons sous un jour ouvré.</span>
+      <span data-lang="fa">درخواست قیمت، نمونه، یا شروع مکالمه. در یک روز کاری پاسخ می‌دهیم.</span>
+    </p>
+
+```
+<div class="contact-grid">
+  <div class="contact-info">
+    <div class="contact-info-item">
+      <div class="contact-icon">◇</div>
+      <div>
+        <span class="label">CEO</span>
+        <span class="value">Arman Hakimipoor</span>
+      </div>
+    </div>
+    <div class="contact-info-item">
+      <div class="contact-icon">✆</div>
+      <div>
+        <span class="label">
+          <span data-lang="en" class="show">Phone &amp; WhatsApp</span>
+          <span data-lang="fr">Téléphone &amp; WhatsApp</span>
+          <span data-lang="fa">تلفن و واتس‌اپ</span>
+        </span>
+        <a href="tel:+33624391546" class="value">+33 6 24 39 15 46</a>
+      </div>
+    </div>
+    <div class="contact-info-item">
+      <div class="contact-icon">@</div>
+      <div>
+        <span class="label">Email</span>
+        <a href="mailto:nirvanut-trading@outlook.com" class="value">nirvanut-trading@outlook.com</a>
+      </div>
+    </div>
+    <div class="contact-info-item">
+      <div class="contact-icon">⌖</div>
+      <div>
+        <span class="label">
+          <span data-lang="en" class="show">Headquarters</span>
+          <span data-lang="fr">Siège social</span>
+          <span data-lang="fa">دفتر مرکزی</span>
+        </span>
+        <span class="value">6 avenue du Général Leclerc<br>95390 Saint-Prix, France</span>
+      </div>
+    </div>
+  </div>
+
+  <form class="contact-form" id="contactForm">
+    <div class="form-row">
+      <div class="form-field">
+        <label>
+          <span data-lang="en" class="show">Your name</span>
+          <span data-lang="fr">Votre nom</span>
+          <span data-lang="fa">نام شما</span>
+        </label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="form-field">
+        <label>
+          <span data-lang="en" class="show">Company</span>
+          <span data-lang="fr">Société</span>
+          <span data-lang="fa">شرکت</span>
+        </label>
+        <input type="text" name="company">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label>
+          <span data-lang="en" class="show">Phone</span>
+          <span data-lang="fr">Téléphone</span>
+          <span data-lang="fa">تلفن</span>
+        </label>
+        <input type="tel" name="phone">
+      </div>
+    </div>
+    <div class="form-field">
+      <label>
+        <span data-lang="en" class="show">Product of interest</span>
+        <span data-lang="fr">Produit d'intérêt</span>
+        <span data-lang="fa">محصول مورد علاقه</span>
+      </label>
+      <select name="product">
+        <option value="">— Select / Sélectionner —</option>
+        <option>Pistachio</option>
+        <option>Almond</option>
+        <option>Hazelnut</option>
+        <option>Cashew</option>
+        <option>Pecan</option>
+        <option>Saffron</option>
+        <option>Multiple / Other</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label>
+        <span data-lang="en" class="show">Message · estimated volume · packaging</span>
+        <span data-lang="fr">Message · volume estimé · conditionnement</span>
+        <span data-lang="fa">پیام · حجم تقریبی · بسته‌بندی</span>
+      </label>
+      <textarea name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="form-submit">
+      <span data-lang="en" class="show">Send request</span>
+      <span data-lang="fr">Envoyer la demande</span>
+      <span data-lang="fa">ارسال درخواست</span>
+      <span>→</span>
+    </button>
+    <div class="form-success" id="formSuccess">
+      <span data-lang="en" class="show">Thank you. Your request has been sent — we'll reply within one working day.</span>
+      <span data-lang="fr">Merci. Votre demande a bien été envoyée — réponse sous un jour ouvré.</span>
+      <span data-lang="fa">سپاسگزاریم. درخواست شما ارسال شد.</span>
+    </div>
+  </form>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Nirvanut <span>Trading</span></div>
+      <div class="footer-brand-tag">From origin to market</div>
+      <p class="footer-desc">
+        <span data-lang="en" class="show">A France-based supplier of premium nuts and dried fruits — direct from origin, built for serious B2B partners.</span>
+        <span data-lang="fr">Fournisseur français de fruits secs premium — direct origine, pour partenaires B2B sérieux.</span>
+        <span data-lang="fa">تأمین‌کننده فرانسوی آجیل و میوه‌های خشک ممتاز.</span>
+      </p>
+    </div>
+    <div class="footer-col">
+      <h5>
+        <span data-lang="en" class="show">Navigate</span>
+        <span data-lang="fr">Naviguer</span>
+        <span data-lang="fa">پیمایش</span>
+      </h5>
+      <ul>
+        <li><a href="#about"><span data-lang="en" class="show">About</span><span data-lang="fr">À propos</span><span data-lang="fa">درباره</span></a></li>
+        <li><a href="#products"><span data-lang="en" class="show">Products</span><span data-lang="fr">Produits</span><span data-lang="fa">محصولات</span></a></li>
+        <li><a href="#pistachio"><span data-lang="en" class="show">Pistachio</span><span data-lang="fr">Pistache</span><span data-lang="fa">پسته</span></a></li>
+        <li><a href="#pricing"><span data-lang="en" class="show">Pricing</span><span data-lang="fr">Tarifs</span><span data-lang="fa">قیمت</span></a></li>
+        <li><a href="#saffron">Saffron</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+33624391546">+33 6 24 39 15 46</a></li>
+        <li><a href="mailto:nirvanut-trading@outlook.com">nirvanut-trading@outlook.com</a></li>
+        <li>6 av. du Général Leclerc<br>95390 Saint-Prix, France</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 Nirvanut Trading · All rights reserved</div>
+    <div>From origin to market</div>
+  </div>
+</footer>
+
+<script>
+// ============ LANGUAGE ============
+var rtlLangs = ['fa'];
+var langCodes = { en: 'EN', fr: 'FR', fa: 'FA' };
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.documentElement.dir = rtlLangs.indexOf(lang) >= 0 ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-lang]').forEach(function(el) {
+    if (el.getAttribute('data-lang') === lang) el.classList.add('show');
+    else el.classList.remove('show');
+  });
+  document.getElementById('langCurrent').textContent = langCodes[lang];
+  document.querySelectorAll('.lang-menu button').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-set-lang') === lang);
+  });
+  document.getElementById('langMenu').classList.remove('open');
+}
+
+document.getElementById('langBtn').addEventListener('click', function(e) {
+  e.stopPropagation();
+  document.getElementById('langMenu').classList.toggle('open');
+});
+document.addEventListener('click', function() {
+  document.getElementById('langMenu').classList.remove('open');
+});
+document.getElementById('langMenu').addEventListener('click', function(e) {
+  var b = e.target.closest('button[data-set-lang]');
+  if (b) { e.stopPropagation(); setLang(b.getAttribute('data-set-lang')); }
+});
+
+// ============ MOBILE MENU ============
+document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+  document.getElementById('mobileNav').classList.toggle('open');
+});
+document.querySelectorAll('.mobile-nav a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('mobileNav').classList.remove('open');
+  });
+});
+
+// ============ PISTACHIO TABS ============
+document.querySelectorAll('.pistachio-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    var name = tab.getAttribute('data-tab');
+    document.querySelectorAll('.pistachio-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.pistachio-content').forEach(function(c) { c.classList.remove('active'); });
+    tab.classList.add('active');
+    document.querySelector('.pistachio-content[data-content="' + name + '"]').classList.add('active');
+  });
+});
+
+// ============ SCROLL REVEAL ============
+(function() {
+  var els = document.querySelectorAll('.section-title, .section-lead, .product-card, .why-card, .saffron-card, .pdf-card, .grade-cell, .size-cell, .process-cell, .stat-num, .hero h1, .hero-lead, .hero-cta, .hero-visual, .about-image, .contact-info, .contact-form, .pricing-table-wrap, .pricing-note');
+  els.forEach(function(el) { el.classList.add('reveal'); });
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(el) { obs.observe(el); });
+  } else {
+    els.forEach(function(el) { el.classList.add('in'); });
+  }
+})();
+
+// ============ CONTACT FORM ============
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var data = new FormData(form);
+  var fields = {
+    name: data.get('name'),
+    company: data.get('company') || '',
+    email: data.get('email'),
+    phone: data.get('phone') || '',
+    product: data.get('product') || '',
+    message: data.get('message')
+  };
+
+  // Build mailto URL with prefilled body
+  var subject = encodeURIComponent('B2B Inquiry — ' + (fields.product || 'Nirvanut Trading'));
+  var body = encodeURIComponent(
+    'Name: ' + fields.name + '\n' +
+    'Company: ' + fields.company + '\n' +
+    'Email: ' + fields.email + '\n' +
+    'Phone: ' + fields.phone + '\n' +
+    'Product of interest: ' + fields.product + '\n\n' +
+    'Message:\n' + fields.message
+  );
+
+  // Open mail client
+  window.location.href = 'mailto:nirvanut-trading@outlook.com?subject=' + subject + '&body=' + body;
+
+  // Show success message
+  document.getElementById('formSuccess').classList.add('show');
+  setTimeout(function() {
+    form.reset();
+    document.getElementById('formSuccess').classList.remove('show');
+  }, 5000);
+});
+</script>
+
+</body>
+</html>
